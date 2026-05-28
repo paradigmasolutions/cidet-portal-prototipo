@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import {
   AlertTriangle, ArrowDown, ArrowRight, ArrowUp, ArrowUpDown, ChevronDown,
   ChevronLeft, ChevronRight, ChevronUp, Download, Eye, FileSearch, FileText,
-  LayoutGrid, MapPin, Search, ShieldCheck, Table as TableIcon, TrendingDown, Users, X,
+  LayoutGrid, MapPin, Search, ShieldCheck, Table as TableIcon, Users, X,
 } from 'lucide-react'
 import { cn, formatDate } from '../lib/utils'
 import { PageHeader } from '../components/ui/PageHeader'

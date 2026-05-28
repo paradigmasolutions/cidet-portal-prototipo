@@ -272,7 +272,6 @@ function ProcesosView() {
     })
     return c
   }, [])
-  const total = activeBusinesses.length + alertas.length
 
   const filteredBusinesses = useMemo(() => {
     // Filter de alertas oculta procesos por completo.

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* CIDET Brand */
+  --color-cidet-cyan: #00cfff;
+  --color-cidet-cyan-dark: #00a6cc;
+  --color-cidet-cyan-light: #e5faff;
+  --color-cidet-green: #86fc3a;
+  --color-cidet-green-dark: #3f7f22;
+  --color-cidet-green-light: #f6fff1;
+  --color-cidet-blue: #00cfff;
+  --color-cidet-navy: #1b2026;
+  --color-cidet-dark: #1b2026;
+  --color-cidet-darker: #11161b;
+  --color-cidet-muted: #6b768e;
+  --color-cidet-muted-10: rgba(107, 118, 142, 0.10);
+  --color-cidet-muted-35: rgba(107, 118, 142, 0.35);
+
+  /* Status Colors */
+  --color-status-expired: #ef4444;
+  --color-status-suspended: #6b768e;
+  --color-status-expiring: #f59e0b;
+  --color-status-valid: #178f5b;
+  --color-status-total: #00cfff;
+
+  /* UI */
+  --color-background: #f7f9fb;
+  --color-card: #ffffff;
+  --color-border: rgba(107, 118, 142, 0.35);
+  --color-text: #1b2026;
+  --color-text-muted: #6b768e;
+
+  --font-family-sans: 'Sora', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  letter-spacing: 0;
+}
+
+/* Frappe Gantt base — copiado de node_modules/frappe-gantt/dist/frappe-gantt.css
+ * porque el `exports` del package bloquea el subpath del CSS y no se puede
+ * importar desde JS. */
+:root{--g-arrow-color: #1f2937;--g-bar-color: #fff;--g-bar-border: #fff;--g-tick-color-thick: #ededed;--g-tick-color: #f3f3f3;--g-actions-background: #f3f3f3;--g-border-color: #ebeff2;--g-text-muted: #7c7c7c;--g-text-light: #fff;--g-text-dark: #171717;--g-progress-color: #dbdbdb;--g-handle-color: #37352f;--g-weekend-label-color: #dcdce4;--g-expected-progress: #c4c4e9;--g-header-background: #fff;--g-row-color: #fdfdfd;--g-row-border-color: #c7c7c7;--g-today-highlight: #37352f;--g-popup-actions: #ebeff2;--g-weekend-highlight-color: #f7f7f7}.gantt-container{line-height:14.5px;position:relative;overflow:auto;font-size:12px;height:var(--gv-grid-height);width:100%;border-radius:8px;isolation:isolate}.gantt-container .popup-wrapper{position:absolute;top:0;left:0;background:var(--g-header-background);box-shadow:0 10px 24px -3px #0003;padding:10px;border-radius:5px;width:max-content;z-index:1000}.gantt-container .popup-wrapper .title{margin-bottom:2px;color:var(--g-text-dark);font-size:.85rem;font-weight:650;line-height:15px}.gantt-container .popup-wrapper .subtitle{color:var(--g-text-dark);font-size:.8rem;margin-bottom:5px}.gantt-container .popup-wrapper .details{color:var(--g-text-muted);font-size:.7rem}.gantt-container .grid-header{height:calc(var(--gv-lower-header-height) + var(--gv-upper-header-height) + 10px);background-color:var(--g-header-background);position:sticky;top:0;left:0;border-bottom:1px solid var(--g-row-border-color);z-index:1000}.gantt-container .lower-text,.gantt-container .upper-text{text-anchor:middle}.gantt-container .upper-header{height:var(--gv-upper-header-height)}.gantt-container .lower-header{height:var(--gv-lower-header-height)}.gantt-container .lower-text{font-size:12px;position:absolute;width:calc(var(--gv-column-width) * .8);height:calc(var(--gv-lower-header-height) * .8);margin:0 calc(var(--gv-column-width) * .1);align-content:center;text-align:center;color:var(--g-text-muted)}.gantt-container .upper-text{position:absolute;width:fit-content;font-weight:500;font-size:14px;color:var(--g-text-dark);height:calc(var(--gv-lower-header-height) * .66)}.gantt-container .current-upper{position:sticky;left:0!important;padding-left:17px;background:var(--g-header-background)}.gantt-container .current-highlight{position:absolute;background:var(--g-today-highlight);width:1px;z-index:999}.gantt-container .current-ball-highlight{position:absolute;background:var(--g-today-highlight);z-index:1001;border-radius:50%}.gantt-container .current-date-highlight{background:var(--g-today-highlight);color:var(--g-text-light);border-radius:5px}.gantt-container .hide{display:none}.gantt{user-select:none;-webkit-user-select:none;position:absolute}.gantt .grid-background{fill:none}.gantt .grid-row{fill:var(--g-row-color)}.gantt .row-line{stroke:var(--g-border-color)}.gantt .tick{stroke:var(--g-tick-color);stroke-width:.4}.gantt .tick.thick{stroke:var(--g-tick-color-thick);stroke-width:.7}.gantt .arrow{fill:none;stroke:var(--g-arrow-color);stroke-width:1.5}.gantt .bar-wrapper .bar{fill:var(--g-bar-color);stroke:var(--g-bar-border);stroke-width:0;transition:stroke-width .3s ease}.gantt .bar-progress{fill:var(--g-progress-color);border-radius:4px}.gantt .bar-invalid{fill:transparent;stroke:var(--g-bar-border);stroke-width:1;stroke-dasharray:5}.gantt .bar-label{fill:var(--g-text-dark);dominant-baseline:central;font-family:Helvetica;font-size:13px;font-weight:400}.gantt .bar-label.big{fill:var(--g-text-dark);text-anchor:start}.gantt .bar-wrapper{cursor:pointer}.gantt .bar-wrapper .bar{outline:1px solid var(--g-row-border-color);border-radius:3px}
+
+/* Frappe Gantt — paleta CIDET por estado de etapa.
+ * - bar-done    → verde (Hecho)
+ * - bar-active  → cyan (En curso)
+ * - bar-pending → gris claro (Pendiente)
+ * - bar-delayed → rojo (la barra se extiende para mostrar el retraso)
+ * El selector tiene que ir sobre el SVG ".bar" que Frappe inserta. Se usa
+ * `!important` puntualmente porque la lib trae fills inline en runtime. */
+.cidet-gantt .bar-done .bar         { fill: #178f5b !important; }
+.cidet-gantt .bar-done .bar-progress  { fill: #0e6b41 !important; }
+.cidet-gantt .bar-active .bar       { fill: #00cfff !important; }
+.cidet-gantt .bar-active .bar-progress  { fill: #00a6cc !important; }
+.cidet-gantt .bar-pending .bar      { fill: #cbd5e1 !important; }
+.cidet-gantt .bar-pending .bar-progress { fill: #94a3b8 !important; }
+.cidet-gantt .bar-delayed .bar      { fill: #ef4444 !important; }
+.cidet-gantt .bar-delayed .bar-progress { fill: #b91c1c !important; }
+.cidet-gantt .bar-label              { fill: #ffffff; font-weight: 600; }
+.cidet-gantt .bar-label.big          { fill: #1b2026; font-weight: 700; }
+.cidet-gantt .arrow                  { stroke: #cbd5e1; stroke-width: 1; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
